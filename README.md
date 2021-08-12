@@ -4,9 +4,9 @@ This deployment is NOT intended for a production environment, 'cause is a dumb O
 
 ## Requirements
 
-Compatible with Odoo 13.0
-OCA queue_job module needed
-SendInBlue account needed
+Compatible with Odoo 13.0,
+OCA queue_job module needed,
+SendInBlue account needed,
 Slack account needed
 
 ** Just setup a basic requirements.txt as usual: pip3 install -r requirements.txt **
