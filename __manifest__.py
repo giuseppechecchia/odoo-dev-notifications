@@ -1,35 +1,36 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'TPN - Third-party notifications',
+    'name': 'A very simple notifications module',
 
     'summary': """
         A simple collection of methods for handling error notifications
-        trought Sendinblue and/or Slack. Use it in your modules to send
-        message using company object
+        Use it in custom modules to send messages trought company object
         """,
 
     'description': """
-        A simple collection of methods for handling error notifications trought
-        Sendinblue and/or Slack. If you want to use it within your modules,
-        remember to depend on him.
+        A simple collection of methods for handling error notifications.
+        If you want to use it within your modules, remember to depend on him.
         """,
 
     'author': 'Giuseppe Checchia',
-    'website': 'https://www.ordinatamente.com',
+    'website': 'https://www.pausacaffe.live/',
 
     'category': 'Utility',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'queue_job'],
 
     'external_dependencies': {
-        'python': ['sib-api-v3-sdk', 'mysql-connector'],
+        'python': ['sib-api-v3-sdk'],
     },
+
+    # TODO add requirements if there's some extra dept to install before
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'data/notification_data.xml',
+        'security/ir.model.access.csv',
         'views/res_company_views_ext.xml'
     ],
 }

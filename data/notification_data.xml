@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="ir_cron_queue_notification_failed_jobs_scheduled" model="ir.cron">
+            <field ref="model_queue_job" name="model_id" />
+            <field name="name">[QUEUE_JOB] Riepilogo jobs falliti</field>
+            <field name="interval_number">60</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="active">0</field>
+            <field name="state">code</field>
+            <field name="code">model.failed_jobs_scheduled(minutes=60)  # Edit kwarg minutes to edit delta</field>
+        </record>
+    </data>
+</odoo>
